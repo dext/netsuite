@@ -148,6 +148,7 @@ module NetSuite
     autoload :DiscountItem,                     'netsuite/records/discount_item'
     autoload :Duration,                         'netsuite/records/duration'
     autoload :Employee,                         'netsuite/records/employee'
+    autoload :ExpenseCategory,                  'netsuite/records/expense_category'
     autoload :File,                             'netsuite/records/file'
     autoload :GiftCertificate,                  'netsuite/records/gift_certificate'
     autoload :GiftCertificateItem,              'netsuite/records/gift_certificate_item'
