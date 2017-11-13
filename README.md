@@ -17,11 +17,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-[![Circle CI](https://circleci.com/gh/NetSweet/netsuite/tree/master.svg?style=svg)](https://circleci.com/gh/NetSweet/netsuite/tree/master)
-[![Slack Status](https://opensuite-slackin.herokuapp.com/badge.svg)](http://opensuite-slackin.herokuapp.com)
-[![Gem Version](https://badge.fury.io/rb/netsuite.svg)](http://badge.fury.io/rb/netsuite)
-[![Dependency Status](https://gemnasium.com/roidrage/lograge.svg)](https://gemnasium.com/netsweet/netsuite)
-
 # NetSuite SuiteTalk API Ruby Gem
 
 * This gem will act as a wrapper around the NetSuite SuiteTalk WebServices API.
@@ -41,7 +36,7 @@ There is some additional helpful resources for NetSuite development [listed here
 Before contributing a patch make sure all existing tests pass.
 
 ```
-git clone git://github.com/NetSweet/netsuite.git
+git clone git://github.com/receipt-bank/netsuite.git
 cd netsuite
 bundle
 bundle exec rspec
@@ -54,8 +49,6 @@ Add this line to your application's Gemfile:
 ```
 gem 'netsuite'
 ```
-
-This gem is built for ruby 1.9.x+, checkout the [1-8-stable](https://github.com/NetSweet/netsuite/tree/1-8-stable) branch for ruby 1.8.x support.
 
 ## Configuration
 
