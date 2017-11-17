@@ -9,7 +9,7 @@ module NetSuite
 
       actions :search
 
-      fields :name
+      fields :name, :is_inactive
 
       field :subsidiary_list, RecordRefList
 
