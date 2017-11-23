@@ -8,6 +8,7 @@ require 'netsuite/utilities/data_center'
 require 'netsuite/rest/utilities/roles'
 require 'netsuite/rest/utilities/request'
 require 'netsuite/core_ext/string/lower_camelcase'
+require 'netsuite/core_ext/nori/xml_utility_node'
 
 module NetSuite
   autoload :Configuration, 'netsuite/configuration'
@@ -75,6 +76,7 @@ module NetSuite
     autoload :Account,                          'netsuite/records/account'
     autoload :AccountingPeriod,                 'netsuite/records/accounting_period'
     autoload :Address,                          'netsuite/records/address'
+    autoload :AttachBasicReference,             'netsuite/records/attach_basic_reference'
     autoload :BaseRefList,                      'netsuite/records/base_ref_list'
     autoload :BillAddress,                      'netsuite/records/bill_address'
     autoload :BillingSchedule,                  'netsuite/records/billing_schedule'
