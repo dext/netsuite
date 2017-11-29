@@ -9,7 +9,7 @@ module NetSuite
 
       actions :add, :initialize, :update, :upsert, :get
 
-      fields :amount, :tran_date, :due_date, :accounting_approval
+      fields :amount, :tran_date, :due_date, :accounting_approval, :complete
 
       field :custom_field_list, CustomFieldList
       field :expense_list, ExpenseReportExpenseList
