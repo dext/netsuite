@@ -65,6 +65,21 @@ module NetSuite
         @response_body ||= response_hash[:base_ref]
       end
 
+      def response_errors
+        if response_hash.any? { |k, v| k == :status && v[:@is_success] == 'false' }
+          @response_errors ||= errors
+        end
+      end
+
+      def errors
+        status_detail = response_hash.dig(:status, :status_detail)
+        if status_detail
+          [NetSuite::Error.new(status_detail)]
+        else
+          []
+        end
+      end
+
       module Support
         def delete(options = {}, credentials={})
           response =  if options.empty?
@@ -72,6 +87,9 @@ module NetSuite
                       else
                         NetSuite::Actions::Delete.call([self, options], credentials)
                       end
+
+          @errors = response.errors
+
           response.success?
         end
       end
