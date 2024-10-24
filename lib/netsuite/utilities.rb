@@ -196,7 +196,9 @@ module NetSuite
         end
 
         # sniff for an email-like input; useful for employee/customer searches
-        if !field_name && /@.*\./ =~ name
+        if !field_name &&
+            name.include?('@') &&
+            name.split('@')[1..].any? { _1.include?('.') }
           field_name = 'email'
         end
 
