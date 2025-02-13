@@ -36,6 +36,9 @@ module NetSuite
               results << result_class.new(record)
             end
           elsif response.body.has_key? :search_row_list
+            RemoteServices.stats.log 'billing',
+                                     'NetSuite search result',
+                                     error_message: response.body.to_json
             # advanced search results
             record_list = response.body[:search_row_list][:search_row]
             record_list = [record_list] unless record_list.is_a?(Array)
